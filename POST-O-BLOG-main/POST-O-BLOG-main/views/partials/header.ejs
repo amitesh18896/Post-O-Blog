@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&family=Red+Hat+Display&family=Signika+Negative&display=swap" rel="stylesheet">
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/15e4344681.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Post-O-Blog</title>
+</head>
+
+<body>
+    <nav id="postoblog-logo" class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" id="toogle-button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <a id="logo" class="navbar-brand" href="/">POST-O-BLOG</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                    <% if (authenticated) { %>
+                        <ul id="link" class="nav navbar-nav navbar-right">
+                            <li class="nav-item link1" class="dropdown" id="first-link">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+                                <div class="dropdown-menu">
+                                    <ul class="dropdown-content list-unstyled">
+                                        <li class="dropdown-item link1"><a href="/">Home</a></li>
+                                        <li class="dropdown-item link1"><a href="/about">About</a></li>
+                                        <li class="dropdown-item link1"><a href="/contact">Contact</a></li>
+                                    </ul>
+                                   
+                                </div>
+                            </li>
+                            <li class="nav-item link1 profile"><a href="/profile">Profile</a></li>
+                            <li class="nav-item link1"><a href="/logout">Log Out</a></li>
+                            <li class="nav-item" id="button-link"><a href="/compose ">Compose</a></li>
+                        </ul>
+                        <% } else { %>
+                            <ul id="link" class="nav navbar-nav navbar-right">
+                                <li class="nav-item link1" class="dropdown" id="first-link">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-content list-unstyled">
+                                            <li class="dropdown-item link1"><a href="/">Home</a></li>
+                                            <li class="dropdown-item link1"><a href="/about">About</a></li>
+                                            <li class="dropdown-item link1"><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    
+                                    </div>
+                                </li>
+                                <li class="nav-item link1"><a href="/signin">
+                                        Sign In
+                                    </a></li>
+                                <li class="nav-item" id="button-link"><a href="/signup">
+                                        Sign Up
+                                    </a></li>
+                            </ul>
+                            <% } %>
+            </div>
+        </div>
+    </nav>
